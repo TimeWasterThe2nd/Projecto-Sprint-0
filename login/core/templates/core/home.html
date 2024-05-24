@@ -4,7 +4,9 @@
 
 <h3>Inicio</h3>
 <hr>
-{% if request.user.is_aunthenticated %}
-<h4>{{ user.username | upper }}</h4>
+
+{% if request.user.is_authenticated %}
+<h4>{{ user.username | upper }}, ya estas logeado</h4>
+{% endif %}
 
 {% endblock %}

@@ -7,14 +7,15 @@
 </head>
 <body>
     <h2>Pagina Inicial</h2>
+    
     <ul>
-        <li><a href="{% url 'home' %}">Inicio</a></li>
-        <li><a href="{% url 'listado' %}">Listados</a></li>
+        <li><a href={% url 'home' %}>Inicio</a></li>
+        <li><a href={% url 'listado' %}>Listados</a></li>
 
-        {% if request.user.is_aunthenticated %}
-        <li><a href="{% url 'exit' %}">Salir</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href={% url 'exit' %}>Salir</a></li>
         {% else %}
-        <li><a href="{% url 'login' %}">Ingresar</a></li>
+        <li><a href={% url 'login' %}>Ingresar</a></li>
         {% endif %}
     </ul>
 

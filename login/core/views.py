@@ -5,7 +5,7 @@ from django.contrib.auth import logout
 # Create your views here.
 
 def home (request):
-    return  render (request, 'core/home.html')
+    return  render(request, 'core/home.html')
 
 @login_required
 def listado(request):
